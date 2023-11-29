@@ -22,7 +22,7 @@ type BlogPostParams = {
 export default function BlogPost({ params }: BlogPostParams) {
   const post = getPostsBySlug(params.slug);
 
-  console.log(post, "this is from the blog page");
+  // console.log(post, "this is from the blog page");
   if (!post) {
     notFound();
   }

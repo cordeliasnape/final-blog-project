@@ -18,7 +18,11 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
       <h2>Comments</h2>
       <h3>Leave a comment</h3>
 
-      <form action={`/api/comments/${postSlug}`} method="POST">
+      <form
+        className="flex flex-col justify-center items-center"
+        action={`/api/comments/${postSlug}`}
+        method="POST"
+      >
         <label htmlFor="username">Name:</label>
         <input type="text" name="username" />
 
@@ -30,7 +34,10 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
       {/* @ts-ignore */}
       {comments.map((comment) => {
         return (
-          <li key={comment.id}>
+          <li
+            className="flex flex-col items-center justify-center m-auto w-[70vw] p-2 border-2 "
+            key={comment.id}
+          >
             {comment.username} says...
             <br />
             {comment.content}
