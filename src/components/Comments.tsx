@@ -1,6 +1,9 @@
 import { WEB_SITE } from "config";
+import { CommentForm } from "./CommentForm";
 
 export default async function Comments({ postSlug }: { postSlug: string }) {
+  //from our blog/slug - then gets parsed to comment form
+
   let comments = [];
 
   try {
@@ -18,7 +21,8 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
       <h2>Comments</h2>
       <h3>Leave a comment</h3>
 
-      <form
+      {/* can be deleted */}
+      {/* <form
         className="flex flex-col justify-center items-center"
         action={`/api/comments/${postSlug}`}
         method="POST"
@@ -30,7 +34,8 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
         <textarea name="comment" cols={30} rows={10} />
 
         <button type="submit">Submit Comment</button>
-      </form>
+      </form> */}
+      <CommentForm postSlug={postSlug} />
       {/* @ts-ignore */}
       {comments.map((comment) => {
         return (

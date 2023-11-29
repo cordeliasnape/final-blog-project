@@ -5,7 +5,6 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { slug: string } }
 ) {
-  //add into a try, catch
   const slug = params.slug;
   const comments = await getComments(slug);
   return NextResponse.json({ comments });
