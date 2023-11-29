@@ -47,13 +47,31 @@ export function CommentForm({ postSlug }: { postSlug: string }) {
   }
   // the handleFormSubmit fuction is passed to the onSubmit event handler on the form
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label htmlFor="username">Name</label>
-      <input type="text" name="username" />
-      <label htmlFor="comment">Comment</label>
-      <textarea name="comment" cols={30} rows={10} />
-      <button type="submit" disabled={isPending}>
-        {isPending ? "sending comment..." : "send comment"}
+    <form
+      onSubmit={handleFormSubmit}
+      className="flex flex-col justify-center items-center"
+    >
+      <div>
+        <label htmlFor="comment"> Leave a Comment</label>
+        <textarea
+          className="outline-gray-400"
+          name="comment"
+          cols={50}
+          rows={10}
+        />
+      </div>
+      <div className="flex-row">
+        <label htmlFor="username" className="mx-3">
+          Name *
+        </label>
+        <input type="text" name="username" />
+      </div>
+      <button
+        type="submit"
+        disabled={isPending}
+        className="p-2 bg-gray-400 text-white m-4"
+      >
+        {isPending ? "Submitting Comment..." : "Submit Comment"}
       </button>
     </form>
   );

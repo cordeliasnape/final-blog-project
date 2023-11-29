@@ -17,36 +17,19 @@ export default async function Comments({ postSlug }: { postSlug: string }) {
   }
 
   return (
-    <div>
-      <h2>Comments</h2>
-      <h3>Leave a comment</h3>
-
-      {/* can be deleted */}
-      {/* <form
-        className="flex flex-col justify-center items-center"
-        action={`/api/comments/${postSlug}`}
-        method="POST"
-      >
-        <label htmlFor="username">Name:</label>
-        <input type="text" name="username" />
-
-        <label htmlFor="comment">Your comment::</label>
-        <textarea name="comment" cols={30} rows={10} />
-
-        <button type="submit">Submit Comment</button>
-      </form> */}
+    <div className="flex flex-col text-center">
       <CommentForm postSlug={postSlug} />
+      <h2>Comments</h2>
       {/* @ts-ignore */}
       {comments.map((comment) => {
         return (
-          <li
-            className="flex flex-col items-center justify-center m-auto w-[70vw] p-2 border-2 "
+          <div
+            className="flex flex-col items-left justify-centre m-5 w-[70vw] p-2 border-2 text-left"
             key={comment.id}
           >
-            {comment.username} says...
-            <br />
-            {comment.content}
-          </li>
+            <div className="uppercase text-xs">{comment.username} says...</div>
+            <div className="my-4">{comment.content}</div>
+          </div>
         );
       })}
     </div>
