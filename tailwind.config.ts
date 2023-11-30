@@ -13,7 +13,7 @@ const config: Config = {
         lightBlue: "#c6e0ff",
         darkGreen: "#55917f",
         paleYellow: "#fcf6bd",
-        beige: "#f2e5cf",
+        beige: "#fbf6ef",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -1,8 +1,8 @@
 export default function AboutInfo() {
   return (
-    <div className="min-h-[80vh] w-[80vw] flex flex-col justify-evenly items-center text-center">
-      <h2 className="text-center text-lg">About the Author</h2>
-      <p className="text-center border-black border-2 p-4">
+    <div className="flex flex-col h-[80%] w-[70%] justify-evenly items-center text-center">
+      <h2 className="flex text-center text-lg">About the Author</h2>
+      <p className="flex text-center border-black border-2 p-4">
         Cordelia Snape is a software developer and teaching assistant living in
         Merseyside, England. She studied Film and Television in Aberystwyth
         University and then began her teaching career in Beijing, China. In her
