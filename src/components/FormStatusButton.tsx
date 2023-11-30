@@ -7,7 +7,7 @@ export default function FormStatusButton() {
 
   return (
     <button type="submit" disabled={pending}>
-      {pending ? "sending comment..." : "send comment"}
+      {pending ? "Submitting Comment..." : "Submit Comment"}
     </button>
   );
 }
