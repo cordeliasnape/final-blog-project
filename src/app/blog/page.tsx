@@ -8,6 +8,7 @@ export default function Page() {
     <div>
       <h2>My Posts</h2>
       <ul>
+        {/* @ts-ignore */}
         {posts.map((post) => {
           return (
             <li key={post.slug}>
