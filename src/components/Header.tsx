@@ -8,7 +8,7 @@ function Header() {
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
           <h1 className="text-2x1 font-bold text-xl mx-auto">
-            Cordelia's Website
+            Cordelia&apos;s Website
           </h1>
           <Link href="/blog">Blog</Link>
         </div>
